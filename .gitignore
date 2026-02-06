@@ -11,6 +11,8 @@
 .svn/
 .swiftpm/
 migrate_working_dir/
+lib/weather/constants.dart
+
 
 # IntelliJ related
 *.iml
