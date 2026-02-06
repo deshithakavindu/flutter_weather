@@ -11,7 +11,7 @@ class OpenWeather {
     print('Getting weather details for lat: $lat, lon: $lon');
 
     var url = Uri.parse(
-      'https://api.openweathermap.org/data/2.5/weather?lat=$lat&lon=$lon&appid=$apiKey',
+      'https://api.openweathermap.org/data/2.5/weather?units=metric&lat=$lat&lon=$lon&appid=$apiKey',
     );
     print('Requesting URL: $url');
 
@@ -29,5 +29,9 @@ class OpenWeather {
       print('Error fetching weather data: $e');
       rethrow;
     }
+  }
+
+  String getWeatherIcon(String icon) {
+    return "https://openweathermap.org/img/wn/$icon@2x.png";
   }
 }
